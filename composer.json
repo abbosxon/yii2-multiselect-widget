@@ -1,0 +1,30 @@
+{
+  "name": "abbosxon/yii2-multiselect-widget",
+  "description": "My first widget",
+  "type": "yii2-widget",
+  "keywords": [
+    "yii2",
+    "extension",
+    "widgets",
+    "multiselect",
+    "asset",
+    "css",
+    "js"
+  ],
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Abbosxon Isoqov",
+      "email": "abbosxon.isoqov@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "abbosxon\\widgets\\multiselect\\": ""
+    }
+  },
+  "require": {
+    "yiisoft/yii2": "2.*",
+    "yiisoft/yii2-bootstrap": "~2.0.0"
+  }
+}
