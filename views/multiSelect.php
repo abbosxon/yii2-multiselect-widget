@@ -30,12 +30,12 @@ use yii\widgets\ActiveForm;
 ?>
 <?php $form = ActiveForm::begin(); ?>
     <div class="row">
-        <?if($leftLabel !== false && $rightLabel !== false){?>
-            <?echo Html::tag('div',Html::label($leftLabel),['class'=>'col-xs-5']);?>
-            <?echo Html::tag('div',Html::label($rightLabel),['class'=>'col-xs-5 col-xs-offset-2']);?>
-        <?}?>
+        <?php if($leftLabel !== false && $rightLabel !== false){?>
+            <?php echo Html::tag('div',Html::label($leftLabel),['class'=>'col-xs-5']);?>
+            <?php echo Html::tag('div',Html::label($rightLabel),['class'=>'col-xs-5 col-xs-offset-2']);?>
+        <?php } ?>
         <div class="col-xs-5 ">
-            <?= Html::dropDownList($widgetNumber.'_from[]',
+            <?=Html::dropDownList($widgetNumber.'_from[]',
                 '',
                 $data,
                 [
