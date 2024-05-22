@@ -47,7 +47,7 @@ use yii\widgets\ActiveForm;
             ?>
         </div>
 
-        <div class="col-xs-2  col-md-2 col-lg-2">
+        <div class="col-xs-2  col-md-2 col-lg-2" style="<?=($leftLabel !== false || $rightLabel !== false) ? "margin-top:30px;":""?>">
             <?=Html::button($leftAllButtonText,$leftAllButtonOptions)?>
             <?=Html::button($leftButtonText,$leftButtonOptions)?>
             <?=Html::button($rightButtonText,$rightButtonOptions)?>
