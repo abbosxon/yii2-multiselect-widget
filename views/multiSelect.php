@@ -30,11 +30,11 @@ use yii\widgets\ActiveForm;
 ?>
 <?php $form = ActiveForm::begin(); ?>
     <div class="row">
-        <?php if($leftLabel !== false && $rightLabel !== false){?>
+
+        <div class="col-xs-5 col-md-5 col-lg-5">
+            <?php if($leftLabel !== false && $rightLabel !== false){?>
             <?php echo Html::tag('div',Html::label($leftLabel),['class'=>'col-xs-5']);?>
-            <?php echo Html::tag('div',Html::label($rightLabel),['class'=>'col-xs-5 col-xs-offset-2']);?>
-        <?php } ?>
-        <div class="col-xs-5 ">
+            <?php } ?>
             <?=Html::dropDownList($widgetNumber.'_from[]',
                 '',
                 $data,
@@ -47,14 +47,17 @@ use yii\widgets\ActiveForm;
             ?>
         </div>
 
-        <div class="col-xs-2">
+        <div class="col-xs-2  col-md-2 col-lg-2">
             <?=Html::button($leftAllButtonText,$leftAllButtonOptions)?>
             <?=Html::button($leftButtonText,$leftButtonOptions)?>
             <?=Html::button($rightButtonText,$rightButtonOptions)?>
             <?=Html::button($rightAllButtonText,$rightAllButtonOptions)?>
         </div>
 
-        <div class="col-xs-5">
+        <div class="col-xs-5  col-md-5 col-lg-5">
+            <?php if($leftLabel !== false && $rightLabel !== false){?>
+                <?php echo Html::tag('div',Html::label($rightLabel),['class'=>'col-xs-5 col-xs-offset-2']);?>
+            <?php } ?>
             <?= Html::dropDownList($widgetNumber.'_to[]',
                 '',
                 $selectedData,
