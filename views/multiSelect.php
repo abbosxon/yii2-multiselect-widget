@@ -32,7 +32,7 @@ use yii\widgets\ActiveForm;
     <div class="row">
 
         <div class="col-xs-5 col-md-5 col-lg-5">
-            <?php if($leftLabel !== false && $rightLabel !== false){?>
+            <?php if($leftLabel !== false){?>
             <?php echo Html::tag('div',Html::label($leftLabel),['class'=>'col-xs-5']);?>
             <?php } ?>
             <?=Html::dropDownList($widgetNumber.'_from[]',
@@ -55,7 +55,7 @@ use yii\widgets\ActiveForm;
         </div>
 
         <div class="col-xs-5  col-md-5 col-lg-5">
-            <?php if($leftLabel !== false && $rightLabel !== false){?>
+            <?php if($rightLabel !== false){?>
                 <?php echo Html::tag('div',Html::label($rightLabel),['class'=>'col-xs-5 col-xs-offset-2']);?>
             <?php } ?>
             <?= Html::dropDownList($widgetNumber.'_to[]',
